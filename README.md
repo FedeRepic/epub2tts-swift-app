@@ -1,42 +1,42 @@
 # ReaderTTS
 
-Lector EPUB nativo para iOS y iPadOS con síntesis de voz local mediante Core ML. Está pensado para leer y escuchar libros sin enviar el contenido a servicios externos.
+A native iOS and iPadOS EPUB reader with on-device text-to-speech powered by Core ML. It is designed for reading and listening to books without sending their contents to external services.
 
-## Funciones principales
+## Highlights
 
-- Biblioteca local de EPUB sin DRM, con portadas, búsqueda, orden y eliminación de libros.
-- Lectura con [Readium](https://github.com/readium/swift-toolkit): índice, gestos, progreso persistente y marcadores.
-- Voz local con Supertonic 3 Core ML FP16: diez estilos de voz, español o inglés elegidos por la persona lectora, velocidad y precarga configurables.
-- Reproducción en segundo plano, controles del sistema, temporizador de sueño y reanudación/pausa.
-- Seguimiento visual del fragmento reproducido con color configurable.
-- Ajustes globales de tipografía, tamaño, interlineado, espaciado, márgenes y apariencia clara/oscura.
+- Local DRM-free EPUB library with covers, search, sorting, and deletion.
+- Reading experience powered by [Readium](https://github.com/readium/swift-toolkit), including table of contents, gestures, persistent progress, and bookmarks.
+- On-device Supertonic 3 Core ML FP16 speech with ten voice styles, user-selected Spanish or English, adjustable speed, and configurable preloading.
+- Background audio, system playback controls, sleep timer, and pause/resume support.
+- Configurable visual tracking of the text currently being spoken.
+- Global typography, text size, line height, character spacing, margins, and light/dark appearance settings.
 
-## Arquitectura
+## Architecture
 
-- `Features/LibraryView.swift`: biblioteca e importación.
-- `Features/ReadiumReaderView.swift`: lector Readium, progreso, marcadores y experiencia de lectura.
-- `Features/ReaderSupport.swift`: ajustes compartidos, cola de síntesis y reproducción.
-- `TTS/SupertonicCoreMLEngine.swift`: tokenización, predicción de duración, denoising ODE y vocoder Core ML.
-- `EPUB/EPUBImporter.swift`: importación segura, extracción privada y metadatos del EPUB.
+- `Features/LibraryView.swift`: library and import experience.
+- `Features/ReadiumReaderView.swift`: Readium reader, progress, bookmarks, and reading UI.
+- `Features/ReaderSupport.swift`: shared settings, synthesis queue, and playback coordination.
+- `TTS/SupertonicCoreMLEngine.swift`: tokenization, duration prediction, ODE denoising, and Core ML vocoding.
+- `EPUB/EPUBImporter.swift`: secure import, private extraction, and EPUB metadata.
 
-Los libros se extraen dentro del sandbox de la app. La posición, marcadores y preferencias se guardan localmente.
+Books are extracted into the app sandbox. Reading position, bookmarks, and preferences are stored locally.
 
-## Requisitos y ejecución
+## Requirements and running the app
 
-1. Abrir `ReaderTTS.xcodeproj` con Xcode 26.2 o posterior.
-2. Configurar la firma del target y ejecutar en un dispositivo con iOS/iPadOS 18 o posterior.
-3. Importar un EPUB sin DRM desde la biblioteca.
+1. Open `ReaderTTS.xcodeproj` in Xcode 26.2 or later.
+2. Configure target signing and run on an iOS or iPadOS 18+ device.
+3. Import a DRM-free EPUB from the library.
 
-El simulador sirve para revisar la interfaz, pero las mediciones de rendimiento, memoria, batería y Neural Engine deben hacerse en un dispositivo real.
+The simulator is useful for UI work. Performance, memory, battery, and Apple Neural Engine measurements should be performed on a physical device.
 
-## Modelo de voz
+## Speech model
 
-La app integra la variante FP16 de [aufklarer/Supertonic-3-CoreML-FP16](https://huggingface.co/aufklarer/Supertonic-3-CoreML-FP16). Los cuatro modelos compilados (`TextEncoder`, `DurationPredictor`, `VectorEstimator` y `Vocoder`), el índice Unicode y los estilos de voz deben estar incluidos como recursos del target.
+The app integrates the FP16 variant of [aufklarer/Supertonic-3-CoreML-FP16](https://huggingface.co/aufklarer/Supertonic-3-CoreML-FP16). The four compiled models (`TextEncoder`, `DurationPredictor`, `VectorEstimator`, and `Vocoder`), Unicode index, and voice styles must be available as target resources.
 
-El motor usa CPU + Apple Neural Engine para evitar la ruta GPU/Metal que causaba inestabilidad con este exportador en versiones recientes de iPadOS. Los binarios del modelo no se versionan en Git; consulta [ModelProvenance.md](ReaderTTS/Resources/ModelProvenance.md) para la revisión, verificaciones y condiciones de redistribución.
+The engine uses CPU and Apple Neural Engine execution to avoid the GPU/Metal route that caused instability with this exporter on recent iPadOS releases. Model binaries are not tracked in Git; see [ModelProvenance.md](ReaderTTS/Resources/ModelProvenance.md) for the exact revision, verification information, and redistribution considerations.
 
-Para habilitar TTS en un clon nuevo, descarga la revisión indicada en ese documento y coloca los directorios compilados `TextEncoder.mlmodelc`, `DurationPredictor.mlmodelc`, `VectorEstimator.mlmodelc` y `Vocoder.mlmodelc` en `ReaderTTS/Resources/CompiledModels/`. El índice Unicode y los estilos de voz sí se incluyen en el repositorio. No añadas los pesos a Git sin revisar previamente la licencia y la autorización de redistribución.
+To enable TTS in a fresh clone, download the revision documented there and place the compiled `TextEncoder.mlmodelc`, `DurationPredictor.mlmodelc`, `VectorEstimator.mlmodelc`, and `Vocoder.mlmodelc` directories in `ReaderTTS/Resources/CompiledModels/`. The Unicode index and voice styles are included in this repository. Do not add model weights to Git before reviewing the license and confirming redistribution authorization.
 
-## Privacidad y límites
+## Privacy and limitations
 
-La lectura, el análisis del EPUB y la síntesis se realizan localmente una vez importado el libro. No se admiten EPUB con DRM. Antes de distribuir la app o los pesos, revisa la licencia OpenRAIL-M y los términos del repositorio del modelo.
+Reading, EPUB processing, and synthesis run locally after a book is imported. DRM-protected EPUBs are not supported. Before distributing the app or model weights, review the OpenRAIL-M license and the model repository terms.
