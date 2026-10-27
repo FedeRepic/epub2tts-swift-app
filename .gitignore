@@ -1,0 +1,17 @@
+.DS_Store
+
+# Xcode
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+
+# Swift Package Manager local state
+.build/
+.swiftpm/
+
+# Core ML weights are downloaded locally; do not redistribute them in Git.
+ReaderTTS/Resources/CompiledModels/
+ReaderTTS/Resources/Models/*.mlpackage/

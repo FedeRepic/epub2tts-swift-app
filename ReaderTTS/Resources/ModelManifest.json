@@ -1,0 +1,15 @@
+{
+  "modelID": "aufklarer/Supertonic-3-CoreML-FP16",
+  "repository": "https://huggingface.co/aufklarer/Supertonic-3-CoreML-FP16",
+  "revision": "2e5aa113851b85195fb694aae1d62cd640365f6b",
+  "license": "OpenRAIL-M (review exact LICENSE and redistribution terms before shipping)",
+  "minimumOS": "iPadOS 18.0",
+  "declaredSizeMB": 189,
+  "downloadedSizeMB": 345,
+  "assets": [
+    { "name": "TextEncoder", "required": true },
+    { "name": "DurationPredictor", "required": true },
+    { "name": "VectorEstimator", "required": true },
+    { "name": "Vocoder", "required": true }
+  ]
+}

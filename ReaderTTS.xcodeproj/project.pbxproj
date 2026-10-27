@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* ReaderTTSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* ReaderTTSApp.swift */; };
+		A10000000000000000000002 /* TTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* TTS.swift */; };
+		A10000000000000000000003 /* ModelManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* ModelManifest.swift */; };
+		A10000000000000000000004 /* ModelAssetLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* ModelAssetLocator.swift */; };
+		A10000000000000000000005 /* SupertonicCoreMLEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* SupertonicCoreMLEngine.swift */; };
+		A10000000000000000000006 /* AudioPlaybackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000006 /* AudioPlaybackController.swift */; };
+		A10000000000000000000009 /* ModelManifest.json in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000009 /* ModelManifest.json */; };
+		A1000000000000000000000F /* unicode_indexer.json in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000010 /* unicode_indexer.json */; };
+		A10000000000000000000010 /* voice_styles in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000011 /* voice_styles */; };
+		A10000000000000000000011 /* CompiledModels in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000012 /* CompiledModels */; };
+		A10000000000000000000012 /* SupertonicTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000013 /* SupertonicTokenizer.swift */; };
+		A10000000000000000000013 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000014 /* Book.swift */; };
+		A10000000000000000000014 /* EPUBImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000015 /* EPUBImporter.swift */; };
+		A10000000000000000000015 /* BookLibraryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000016 /* BookLibraryStore.swift */; };
+		A10000000000000000000016 /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000017 /* LibraryViewModel.swift */; };
+		A10000000000000000000017 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000018 /* LibraryView.swift */; };
+		A10000000000000000000018 /* ReaderSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000019 /* ReaderSupport.swift */; };
+		A10000000000000000000019 /* ReadiumZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = A90000000000000000000001 /* ReadiumZIPFoundation */; };
+		A1000000000000000000001A /* ReadiumReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001A /* ReadiumReaderView.swift */; };
+		A1000000000000000000001B /* ReadiumShared in Frameworks */ = {isa = PBXBuildFile; productRef = A90000000000000000000003 /* ReadiumShared */; };
+		A1000000000000000000001C /* ReadiumStreamer in Frameworks */ = {isa = PBXBuildFile; productRef = A90000000000000000000004 /* ReadiumStreamer */; };
+		A1000000000000000000001D /* ReadiumNavigator in Frameworks */ = {isa = PBXBuildFile; productRef = A90000000000000000000005 /* ReadiumNavigator */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A20000000000000000000001 /* ReaderTTSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderTTSApp.swift; sourceTree = "<group>"; };
+		A20000000000000000000002 /* TTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTS.swift; sourceTree = "<group>"; };
+		A20000000000000000000003 /* ModelManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManifest.swift; sourceTree = "<group>"; };
+		A20000000000000000000004 /* ModelAssetLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAssetLocator.swift; sourceTree = "<group>"; };
+		A20000000000000000000005 /* SupertonicCoreMLEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupertonicCoreMLEngine.swift; sourceTree = "<group>"; };
+		A20000000000000000000006 /* AudioPlaybackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlaybackController.swift; sourceTree = "<group>"; };
+		A20000000000000000000009 /* ModelManifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ModelManifest.json; sourceTree = "<group>"; };
+		A2000000000000000000000A /* ReaderTTS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReaderTTS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20000000000000000000010 /* unicode_indexer.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = unicode_indexer.json; sourceTree = "<group>"; };
+		A20000000000000000000011 /* voice_styles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = voice_styles; sourceTree = "<group>"; };
+		A20000000000000000000012 /* CompiledModels */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CompiledModels; sourceTree = "<group>"; };
+		A20000000000000000000013 /* SupertonicTokenizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupertonicTokenizer.swift; sourceTree = "<group>"; };
+		A20000000000000000000014 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		A20000000000000000000015 /* EPUBImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPUBImporter.swift; sourceTree = "<group>"; };
+		A20000000000000000000016 /* BookLibraryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookLibraryStore.swift; sourceTree = "<group>"; };
+		A20000000000000000000017 /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
+		A20000000000000000000018 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		A20000000000000000000019 /* ReaderSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderSupport.swift; sourceTree = "<group>"; };
+		A2000000000000000000001A /* ReadiumReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadiumReaderView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A30000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000019 /* ReadiumZIPFoundation in Frameworks */,
+				A1000000000000000000001B /* ReadiumShared in Frameworks */,
+				A1000000000000000000001C /* ReadiumStreamer in Frameworks */,
+				A1000000000000000000001D /* ReadiumNavigator in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A40000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A40000000000000000000002 /* ReaderTTS */,
+				A40000000000000000000008 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A40000000000000000000002 /* ReaderTTS */ = {
+			isa = PBXGroup;
+			children = (
+				A40000000000000000000003 /* App */,
+				A40000000000000000000004 /* Domain */,
+				A40000000000000000000005 /* TTS */,
+				A40000000000000000000006 /* Audio */,
+				A40000000000000000000007 /* Features */,
+				A4000000000000000000000B /* EPUB */,
+				A4000000000000000000000C /* Persistence */,
+				A40000000000000000000009 /* Resources */,
+			);
+			path = ReaderTTS;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000003 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000001 /* ReaderTTSApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000004 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000002 /* TTS.swift */,
+				A20000000000000000000003 /* ModelManifest.swift */,
+				A20000000000000000000014 /* Book.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000005 /* TTS */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000004 /* ModelAssetLocator.swift */,
+				A20000000000000000000005 /* SupertonicCoreMLEngine.swift */,
+				A20000000000000000000013 /* SupertonicTokenizer.swift */,
+			);
+			path = TTS;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000006 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000006 /* AudioPlaybackController.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000007 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000017 /* LibraryViewModel.swift */,
+				A20000000000000000000018 /* LibraryView.swift */,
+				A20000000000000000000019 /* ReaderSupport.swift */,
+				A2000000000000000000001A /* ReadiumReaderView.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000008 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2000000000000000000000A /* ReaderTTS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000009 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000009 /* ModelManifest.json */,
+				A4000000000000000000000A /* Models */,
+				A20000000000000000000012 /* CompiledModels */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A4000000000000000000000A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000010 /* unicode_indexer.json */,
+				A20000000000000000000011 /* voice_styles */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A4000000000000000000000B /* EPUB */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000015 /* EPUBImporter.swift */,
+			);
+			path = EPUB;
+			sourceTree = "<group>";
+		};
+		A4000000000000000000000C /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000016 /* BookLibraryStore.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A50000000000000000000001 /* ReaderTTS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A60000000000000000000002 /* Build configuration list for PBXNativeTarget "ReaderTTS" */;
+			buildPhases = (
+				A30000000000000000000002 /* Sources */,
+				A30000000000000000000001 /* Frameworks */,
+				A30000000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReaderTTS;
+			packageProductDependencies = (
+				A90000000000000000000001 /* ReadiumZIPFoundation */,
+				A90000000000000000000003 /* ReadiumShared */,
+				A90000000000000000000004 /* ReadiumStreamer */,
+				A90000000000000000000005 /* ReadiumNavigator */,
+			);
+			productName = ReaderTTS;
+			productReference = A2000000000000000000000A /* ReaderTTS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A70000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					A50000000000000000000001 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+				};
+			};
+			buildConfigurationList = A60000000000000000000001 /* Build configuration list for PBXProject "ReaderTTS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				es,
+			);
+			mainGroup = A40000000000000000000001;
+			packageReferences = (
+				A90000000000000000000002 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
+				A90000000000000000000006 /* XCRemoteSwiftPackageReference "swift-toolkit" */,
+			);
+			productRefGroup = A40000000000000000000008 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A50000000000000000000001 /* ReaderTTS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A30000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000009 /* ModelManifest.json in Resources */,
+				A1000000000000000000000F /* unicode_indexer.json in Resources */,
+				A10000000000000000000010 /* voice_styles in Resources */,
+				A10000000000000000000011 /* CompiledModels in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A30000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000001 /* ReaderTTSApp.swift in Sources */,
+				A10000000000000000000002 /* TTS.swift in Sources */,
+				A10000000000000000000003 /* ModelManifest.swift in Sources */,
+				A10000000000000000000004 /* ModelAssetLocator.swift in Sources */,
+				A10000000000000000000005 /* SupertonicCoreMLEngine.swift in Sources */,
+				A10000000000000000000006 /* AudioPlaybackController.swift in Sources */,
+				A10000000000000000000012 /* SupertonicTokenizer.swift in Sources */,
+				A10000000000000000000013 /* Book.swift in Sources */,
+				A10000000000000000000014 /* EPUBImporter.swift in Sources */,
+				A10000000000000000000015 /* BookLibraryStore.swift in Sources */,
+				A10000000000000000000016 /* LibraryViewModel.swift in Sources */,
+				A10000000000000000000017 /* LibraryView.swift in Sources */,
+				A10000000000000000000018 /* ReaderSupport.swift in Sources */,
+				A1000000000000000000001A /* ReadiumReaderView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A80000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		A80000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		A80000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SR74D96M2C;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ReaderTTS/App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.federepic.ReaderTTS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A80000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SR74D96M2C;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ReaderTTS/App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.federepic.ReaderTTS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A60000000000000000000001 /* Build configuration list for PBXProject "ReaderTTS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A80000000000000000000001 /* Debug */,
+				A80000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A60000000000000000000002 /* Build configuration list for PBXNativeTarget "ReaderTTS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A80000000000000000000003 /* Debug */,
+				A80000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A90000000000000000000002 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/readium/ZIPFoundation.git";
+			requirement = {
+				kind = exactVersion;
+				version = 3.0.1;
+			};
+		};
+		A90000000000000000000006 /* XCRemoteSwiftPackageReference "swift-toolkit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/readium/swift-toolkit.git";
+			requirement = {
+				kind = exactVersion;
+				version = 3.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A90000000000000000000001 /* ReadiumZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A90000000000000000000002 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ReadiumZIPFoundation;
+		};
+		A90000000000000000000003 /* ReadiumShared */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A90000000000000000000006 /* XCRemoteSwiftPackageReference "swift-toolkit" */;
+			productName = ReadiumShared;
+		};
+		A90000000000000000000004 /* ReadiumStreamer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A90000000000000000000006 /* XCRemoteSwiftPackageReference "swift-toolkit" */;
+			productName = ReadiumStreamer;
+		};
+		A90000000000000000000005 /* ReadiumNavigator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A90000000000000000000006 /* XCRemoteSwiftPackageReference "swift-toolkit" */;
+			productName = ReadiumNavigator;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A70000000000000000000001 /* Project object */;
+}
